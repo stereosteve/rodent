@@ -127,7 +127,7 @@ function start(optParser, packageJson) {
   var env = inlineEnv(targetConf.env);
   sshs(targetConf.ssh, [
     "cd " + appPath(packageJson, targetName),
-    env + " authbind --deep npm start"
+    env + " npm start"
   ]);
 }
 function stop(optParser, packageJson) {
